@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-Hant">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.7"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Base64: Sources/Base64.c 原始程式檔</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Base64
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 產生者: Doxygen 1.9.7 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜尋');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">載入中...</div>
+<div class="SRStatus" id="Searching">搜尋中...</div>
+<div class="SRStatus" id="NoMatches">無符合項目</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_937900b87e0c7a5fa01190c395fb83f7.html">Sources</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">Base64.c</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_base64_8c.html">查看本檔案說明文件.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;../Headers/Base64.h&quot;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="_base64_8h.html#ab04f046ce35d65f450c45612ac77caa0">   23</a></span><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* <a class="code hl_function" href="_base64_8c.html#aeee3fb214cd4dcd2d46bb724e4efac6e">base64Encode</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* plainText, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> plainTextLength)</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>{</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> encodedLength = 4 * ((plainTextLength + 2) / 3);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* encodedData = (<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>*)malloc(encodedLength + 1);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keywordflow">if</span> (encodedData == NULL) {</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    }</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0, j = 0; i &lt; plainTextLength;) {</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> octFirst = i &lt; plainTextLength ? plainText[i++] : 0;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> octSecond = i &lt; plainTextLength ? plainText[i++] : 0;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> octThird = i &lt; plainTextLength ? plainText[i++] : 0;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> triple = (octFirst &lt;&lt; 0x10) + (octSecond &lt;&lt; 0x08) + octThird;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        encodedData[j++] = (<span class="keywordtype">unsigned</span> char)<a class="code hl_variable" href="_base64_8h.html#aad684b55577d00ab391913191cddc849">base64Alphabets</a>[(triple &gt;&gt; 3 * 6) &amp; 0x3F];</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        encodedData[j++] = (<span class="keywordtype">unsigned</span> char)<a class="code hl_variable" href="_base64_8h.html#aad684b55577d00ab391913191cddc849">base64Alphabets</a>[(triple &gt;&gt; 2 * 6) &amp; 0x3F];</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        encodedData[j++] = (<span class="keywordtype">unsigned</span> char)<a class="code hl_variable" href="_base64_8h.html#aad684b55577d00ab391913191cddc849">base64Alphabets</a>[(triple &gt;&gt; 1 * 6) &amp; 0x3F];</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        encodedData[j++] = (<span class="keywordtype">unsigned</span> char)<a class="code hl_variable" href="_base64_8h.html#aad684b55577d00ab391913191cddc849">base64Alphabets</a>[(triple &gt;&gt; 0 * 6) &amp; 0x3F];</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    }</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; (3 - plainTextLength % 3) % 3; i++) {</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        encodedData[encodedLength - 1 - i] = <span class="charliteral">&#39;=&#39;</span>;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    }</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    encodedData[encodedLength] = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keywordflow">return</span> encodedData;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>}</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="_base64_8h.html#a2dc9372a456b5fdc6019b51551561d4e">   72</a></span><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* <a class="code hl_function" href="_base64_8c.html#a458fcb356097ffd6d30f35dbe227b4d5">base64Decode</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* encodedData, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> encodedLength)</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>{</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> decodedLength = encodedLength / 4 * 3;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <span class="keywordflow">if</span> (encodedData == NULL) {</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    }</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keywordflow">if</span> (encodedLength % 4 != 0) {</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    }</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keywordflow">if</span> (encodedData[encodedLength - 1] == <span class="charliteral">&#39;=&#39;</span>) {</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        (decodedLength)--;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    }</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="keywordflow">if</span> (encodedData[encodedLength - 2] == <span class="charliteral">&#39;=&#39;</span>) {</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        (decodedLength)--;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    }</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* decodedData = (<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>*)malloc(decodedLength + 1);</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <span class="keywordflow">if</span> (decodedData == NULL) {</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    }</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0, j = 0; i &lt; encodedLength;) {</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> sextet_a = encodedData[i] == <span class="charliteral">&#39;=&#39;</span> ? 0 &amp; i++ : <a class="code hl_function" href="_base64_8c.html#a170b60e29b6cc8829d8267029ebc1572">getBase64Index</a>(encodedData[i++]);</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> sextet_b = encodedData[i] == <span class="charliteral">&#39;=&#39;</span> ? 0 &amp; i++ : <a class="code hl_function" href="_base64_8c.html#a170b60e29b6cc8829d8267029ebc1572">getBase64Index</a>(encodedData[i++]);</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> sextet_c = encodedData[i] == <span class="charliteral">&#39;=&#39;</span> ? 0 &amp; i++ : <a class="code hl_function" href="_base64_8c.html#a170b60e29b6cc8829d8267029ebc1572">getBase64Index</a>(encodedData[i++]);</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> sextet_d = encodedData[i] == <span class="charliteral">&#39;=&#39;</span> ? 0 &amp; i++ : <a class="code hl_function" href="_base64_8c.html#a170b60e29b6cc8829d8267029ebc1572">getBase64Index</a>(encodedData[i++]);</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> triple = (sextet_a &lt;&lt; 3 * 6) + (sextet_b &lt;&lt; 2 * 6) + (sextet_c &lt;&lt; 1 * 6) + (sextet_d &lt;&lt; 0 * 6);</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        <span class="keywordflow">if</span> (j &lt; decodedLength) {</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>            decodedData[j++] = (triple &gt;&gt; 2 * 8) &amp; 0xFF;</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        }</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        <span class="keywordflow">if</span> (j &lt; decodedLength) {</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>            decodedData[j++] = (triple &gt;&gt; 1 * 8) &amp; 0xFF;</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        }</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        <span class="keywordflow">if</span> (j &lt; decodedLength) {</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>            decodedData[j++] = (triple &gt;&gt; 0 * 8) &amp; 0xFF;</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        }</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    }</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    decodedData[decodedLength] = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    <span class="keywordflow">return</span> decodedData;</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>}</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span> </div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno"><a class="line" href="_base64_8h.html#a7cd8213ce0437fd79d950fd80c7125c8">  130</a></span><span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_function" href="_base64_8c.html#a170b60e29b6cc8829d8267029ebc1572">getBase64Index</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> alphabet)</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>{</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    <span class="keywordtype">int</span> returnedValue = 0;</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> </div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    <span class="keywordflow">if</span> (alphabet &gt;= (<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>)<span class="charliteral">&#39;A&#39;</span> &amp;&amp; alphabet &lt;= (<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>)<span class="charliteral">&#39;Z&#39;</span>) {</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        returnedValue = alphabet - (<span class="keywordtype">unsigned</span> char)<span class="charliteral">&#39;A&#39;</span>;</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (alphabet &gt;= (<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>)<span class="charliteral">&#39;a&#39;</span> &amp;&amp; alphabet &lt;= (<span class="keywordtype">unsigned</span> char)<span class="charliteral">&#39;z&#39;</span>) {</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>        returnedValue = alphabet - (<span class="keywordtype">unsigned</span> char)<span class="charliteral">&#39;a&#39;</span> + 26;</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (alphabet &gt;= (<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>)<span class="charliteral">&#39;0&#39;</span> &amp;&amp; alphabet &lt;= (<span class="keywordtype">unsigned</span> char)<span class="charliteral">&#39;9&#39;</span>) {</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>        returnedValue = alphabet - (<span class="keywordtype">unsigned</span> char)<span class="charliteral">&#39;0&#39;</span> + 52;</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (alphabet == (<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>)<span class="charliteral">&#39;+&#39;</span>) {</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>        returnedValue = 62;</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (alphabet == (<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>)<span class="charliteral">&#39;/&#39;</span>) {</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>        returnedValue = 63;</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    }</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span> </div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    <span class="keywordflow">return</span> returnedValue;</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>}</div>
+<div class="ttc" id="a_base64_8c_html_a170b60e29b6cc8829d8267029ebc1572"><div class="ttname"><a href="_base64_8c.html#a170b60e29b6cc8829d8267029ebc1572">getBase64Index</a></div><div class="ttdeci">unsigned int getBase64Index(unsigned char alphabet)</div><div class="ttdef"><b>Definition</b> <a href="_base64_8c_source.html#l00130">Base64.c:130</a></div></div>
+<div class="ttc" id="a_base64_8c_html_a458fcb356097ffd6d30f35dbe227b4d5"><div class="ttname"><a href="_base64_8c.html#a458fcb356097ffd6d30f35dbe227b4d5">base64Decode</a></div><div class="ttdeci">unsigned char * base64Decode(unsigned char *encodedData, unsigned int encodedLength)</div><div class="ttdef"><b>Definition</b> <a href="_base64_8c_source.html#l00072">Base64.c:72</a></div></div>
+<div class="ttc" id="a_base64_8c_html_aeee3fb214cd4dcd2d46bb724e4efac6e"><div class="ttname"><a href="_base64_8c.html#aeee3fb214cd4dcd2d46bb724e4efac6e">base64Encode</a></div><div class="ttdeci">unsigned char * base64Encode(unsigned char *plainText, unsigned int plainTextLength)</div><div class="ttdef"><b>Definition</b> <a href="_base64_8c_source.html#l00023">Base64.c:23</a></div></div>
+<div class="ttc" id="a_base64_8h_html_aad684b55577d00ab391913191cddc849"><div class="ttname"><a href="_base64_8h.html#aad684b55577d00ab391913191cddc849">base64Alphabets</a></div><div class="ttdeci">static const unsigned char base64Alphabets[]</div><div class="ttdef"><b>Definition</b> <a href="_base64_8h_source.html#l00016">Base64.h:16</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+產生者:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7
+</small></address>
+</body>
+</html>

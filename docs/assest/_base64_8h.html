@@ -1,0 +1,395 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-Hant">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.7"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Base64: Headers/Base64.h 檔案參考文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="Logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Base64
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 產生者: Doxygen 1.9.7 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜尋');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">載入中...</div>
+<div class="SRStatus" id="Searching">搜尋中...</div>
+<div class="SRStatus" id="NoMatches">無符合項目</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_692516b589a32b3bfce781ca9f6d1534.html">Headers</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">函式</a> &#124;
+<a href="#var-members">變數</a>  </div>
+  <div class="headertitle"><div class="title">Base64.h 檔案參考文件</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>base 64 en(de)coding definition  
+<a href="#details">更多...</a></p>
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Base64.h的包含相依圖:</div>
+<div class="dyncontent">
+<div class="center"><img src="_base64_8h__incl.png" border="0" usemap="#a_headers_2_base64_8h" alt=""/></div>
+<map name="a_headers_2_base64_8h" id="a_headers_2_base64_8h">
+<area shape="rect" title="base 64 en(de)coding definition" alt="" coords="57,5,185,32"/>
+<area shape="rect" title=" " alt="" coords="5,80,66,107"/>
+<area shape="poly" title=" " alt="" coords="108,35,63,72,59,68,104,31"/>
+<area shape="rect" title=" " alt="" coords="89,80,153,107"/>
+<area shape="poly" title=" " alt="" coords="124,33,124,65,118,65,118,33"/>
+<area shape="rect" title=" " alt="" coords="177,80,241,107"/>
+<area shape="poly" title=" " alt="" coords="138,30,184,68,181,72,134,35"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+本圖顯示出哪些檔案直接或間接include本檔 :</div>
+<div class="dyncontent">
+<div class="center"><img src="_base64_8h__dep__incl.png" border="0" usemap="#a_headers_2_base64_8hdep" alt=""/></div>
+<map name="a_headers_2_base64_8hdep" id="a_headers_2_base64_8hdep">
+<area shape="rect" title="base 64 en(de)coding definition" alt="" coords="5,5,134,32"/>
+<area shape="rect" href="_base64_8c.html" title=" " alt="" coords="5,80,134,107"/>
+<area shape="poly" title=" " alt="" coords="72,47,72,80,67,80,67,47"/>
+</map>
+</div>
+</div>
+<p><a href="_base64_8h_source.html">查看本檔案的原始碼.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函式</h2></td></tr>
+<tr class="memitem:ab04f046ce35d65f450c45612ac77caa0"><td class="memItemLeft" align="right" valign="top">unsigned char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_base64_8h.html#ab04f046ce35d65f450c45612ac77caa0">base64Encode</a> (unsigned char *, unsigned int)</td></tr>
+<tr class="separator:ab04f046ce35d65f450c45612ac77caa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2dc9372a456b5fdc6019b51551561d4e"><td class="memItemLeft" align="right" valign="top">unsigned char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_base64_8h.html#a2dc9372a456b5fdc6019b51551561d4e">base64Decode</a> (unsigned char *, unsigned int)</td></tr>
+<tr class="separator:a2dc9372a456b5fdc6019b51551561d4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7cd8213ce0437fd79d950fd80c7125c8"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_base64_8h.html#a7cd8213ce0437fd79d950fd80c7125c8">getBase64Index</a> (unsigned char)</td></tr>
+<tr class="separator:a7cd8213ce0437fd79d950fd80c7125c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+變數</h2></td></tr>
+<tr class="memitem:aad684b55577d00ab391913191cddc849"><td class="memItemLeft" align="right" valign="top">static const unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_base64_8h.html#aad684b55577d00ab391913191cddc849">base64Alphabets</a> [] = &quot;ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/&quot;</td></tr>
+<tr class="separator:aad684b55577d00ab391913191cddc849"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳細描述</h2>
+<div class="textblock"><p>base 64 en(de)coding definition </p>
+<p>base 64 en(de)coding implementation</p>
+<dl class="section author"><dt>作者</dt><dd>Ian, Chen </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>1.0 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>2023-07-31 </dd></dl>
+
+<p class="definition">定義在 <a class="el" href="_base64_8h_source.html">Base64.h</a> 檔.</p>
+</div><h2 class="groupheader">函式說明文件</h2>
+<a id="a2dc9372a456b5fdc6019b51551561d4e" name="a2dc9372a456b5fdc6019b51551561d4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2dc9372a456b5fdc6019b51551561d4e">&#9670;&#160;</a></span>base64Decode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned char * base64Decode </td>
+          <td>(</td>
+          <td class="paramtype">unsigned char *&#160;</td>
+          <td class="paramname"><em>encodedData</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>encodedLength</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Base64 decode; users don't feel like knowing the length of decoded data (the plain text) in advance. In return, users shall free decoded data memory manually. If the return value is NULL, please don't free the returned memory.</p>
+<dl class="params"><dt>參數</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">encodedData</td><td>unsigned char* The encoded text which users feel like decoding </td></tr>
+    <tr><td class="paramname">encodedLength</td><td>unsigned int The length of the plain text which users feel like encoding </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>傳回值</dt><dd>unsigned char* The plain text; users shall free decoded data memory manually; if the return value is NULL, please don't free the returned memory </dd></dl>
+<p>Checking the last two characters; according to the base 64 encoding, the <code>=</code> notation will occur twice at most</p>
+<p>Like encoding, four alphabets are treated in each round in base64 encoding</p>
+<p>Like encoding, obtaining results by using significant bits</p>
+
+<p class="definition">定義在 <a class="el" href="_base64_8c_source.html">Base64.c</a> 檔案之第 <a class="el" href="_base64_8c_source.html#l00072">72</a> 行.</p>
+<div class="fragment"><div class="line"><span class="lineno">   73</span>{</div>
+<div class="line"><span class="lineno">   74</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> decodedLength = encodedLength / 4 * 3;</div>
+<div class="line"><span class="lineno">   75</span>    <span class="keywordflow">if</span> (encodedData == NULL) {</div>
+<div class="line"><span class="lineno">   76</span>        <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><span class="lineno">   77</span>    }</div>
+<div class="line"><span class="lineno">   78</span> </div>
+<div class="line"><span class="lineno">   79</span>    <span class="keywordflow">if</span> (encodedLength % 4 != 0) {</div>
+<div class="line"><span class="lineno">   80</span>        <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><span class="lineno">   81</span>    }</div>
+<div class="line"><span class="lineno">   82</span> </div>
+<div class="line"><span class="lineno">   86</span>    <span class="keywordflow">if</span> (encodedData[encodedLength - 1] == <span class="charliteral">&#39;=&#39;</span>) {</div>
+<div class="line"><span class="lineno">   87</span>        (decodedLength)--;</div>
+<div class="line"><span class="lineno">   88</span>    }</div>
+<div class="line"><span class="lineno">   89</span>    <span class="keywordflow">if</span> (encodedData[encodedLength - 2] == <span class="charliteral">&#39;=&#39;</span>) {</div>
+<div class="line"><span class="lineno">   90</span>        (decodedLength)--;</div>
+<div class="line"><span class="lineno">   91</span>    }</div>
+<div class="line"><span class="lineno">   92</span> </div>
+<div class="line"><span class="lineno">   93</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* decodedData = (<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>*)malloc(decodedLength + 1);</div>
+<div class="line"><span class="lineno">   94</span>    <span class="keywordflow">if</span> (decodedData == NULL) {</div>
+<div class="line"><span class="lineno">   95</span>        <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><span class="lineno">   96</span>    }</div>
+<div class="line"><span class="lineno">   97</span> </div>
+<div class="line"><span class="lineno">   98</span>    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0, j = 0; i &lt; encodedLength;) {</div>
+<div class="line"><span class="lineno">   99</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> sextet_a = encodedData[i] == <span class="charliteral">&#39;=&#39;</span> ? 0 &amp; i++ : <a class="code hl_function" href="_base64_8c.html#a170b60e29b6cc8829d8267029ebc1572">getBase64Index</a>(encodedData[i++]);</div>
+<div class="line"><span class="lineno">  100</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> sextet_b = encodedData[i] == <span class="charliteral">&#39;=&#39;</span> ? 0 &amp; i++ : <a class="code hl_function" href="_base64_8c.html#a170b60e29b6cc8829d8267029ebc1572">getBase64Index</a>(encodedData[i++]);</div>
+<div class="line"><span class="lineno">  101</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> sextet_c = encodedData[i] == <span class="charliteral">&#39;=&#39;</span> ? 0 &amp; i++ : <a class="code hl_function" href="_base64_8c.html#a170b60e29b6cc8829d8267029ebc1572">getBase64Index</a>(encodedData[i++]);</div>
+<div class="line"><span class="lineno">  102</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> sextet_d = encodedData[i] == <span class="charliteral">&#39;=&#39;</span> ? 0 &amp; i++ : <a class="code hl_function" href="_base64_8c.html#a170b60e29b6cc8829d8267029ebc1572">getBase64Index</a>(encodedData[i++]);</div>
+<div class="line"><span class="lineno">  103</span> </div>
+<div class="line"><span class="lineno">  105</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> triple = (sextet_a &lt;&lt; 3 * 6) + (sextet_b &lt;&lt; 2 * 6) + (sextet_c &lt;&lt; 1 * 6) + (sextet_d &lt;&lt; 0 * 6);</div>
+<div class="line"><span class="lineno">  106</span> </div>
+<div class="line"><span class="lineno">  108</span>        <span class="keywordflow">if</span> (j &lt; decodedLength) {</div>
+<div class="line"><span class="lineno">  109</span>            decodedData[j++] = (triple &gt;&gt; 2 * 8) &amp; 0xFF;</div>
+<div class="line"><span class="lineno">  110</span>        }</div>
+<div class="line"><span class="lineno">  111</span>        <span class="keywordflow">if</span> (j &lt; decodedLength) {</div>
+<div class="line"><span class="lineno">  112</span>            decodedData[j++] = (triple &gt;&gt; 1 * 8) &amp; 0xFF;</div>
+<div class="line"><span class="lineno">  113</span>        }</div>
+<div class="line"><span class="lineno">  114</span>        <span class="keywordflow">if</span> (j &lt; decodedLength) {</div>
+<div class="line"><span class="lineno">  115</span>            decodedData[j++] = (triple &gt;&gt; 0 * 8) &amp; 0xFF;</div>
+<div class="line"><span class="lineno">  116</span>        }</div>
+<div class="line"><span class="lineno">  117</span>    }</div>
+<div class="line"><span class="lineno">  118</span> </div>
+<div class="line"><span class="lineno">  119</span>    decodedData[decodedLength] = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><span class="lineno">  120</span>    <span class="keywordflow">return</span> decodedData;</div>
+<div class="line"><span class="lineno">  121</span>}</div>
+<div class="ttc" id="a_base64_8c_html_a170b60e29b6cc8829d8267029ebc1572"><div class="ttname"><a href="_base64_8c.html#a170b60e29b6cc8829d8267029ebc1572">getBase64Index</a></div><div class="ttdeci">unsigned int getBase64Index(unsigned char alphabet)</div><div class="ttdef"><b>Definition</b> <a href="_base64_8c_source.html#l00130">Base64.c:130</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+這是此函數的引用函數圖:</div>
+<div class="dyncontent">
+<div class="center"><img src="_base64_8h_a2dc9372a456b5fdc6019b51551561d4e_cgraph.png" border="0" usemap="#a_base64_8h_a2dc9372a456b5fdc6019b51551561d4e_cgraph" alt=""/></div>
+<map name="a_base64_8h_a2dc9372a456b5fdc6019b51551561d4e_cgraph" id="a_base64_8h_a2dc9372a456b5fdc6019b51551561d4e_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,113,32"/>
+<area shape="rect" href="_base64_8c.html#a170b60e29b6cc8829d8267029ebc1572" title=" " alt="" coords="161,5,275,32"/>
+<area shape="poly" title=" " alt="" coords="113,16,146,16,146,21,113,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab04f046ce35d65f450c45612ac77caa0" name="ab04f046ce35d65f450c45612ac77caa0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab04f046ce35d65f450c45612ac77caa0">&#9670;&#160;</a></span>base64Encode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned char * base64Encode </td>
+          <td>(</td>
+          <td class="paramtype">unsigned char *&#160;</td>
+          <td class="paramname"><em>plainText</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>plainTextLength</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Base64 encode; users don't feel like knowing the length of encoded data in advance. In return, users shall free encoded data memory manually. If the return value is NULL, please don't free the returned memory.</p>
+<dl class="params"><dt>參數</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">plainText</td><td>unsigned char* The plain text which users feel like encoding </td></tr>
+    <tr><td class="paramname">plainTextLength</td><td>unsigned int The length of the plain text which users feel like encoding </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>傳回值</dt><dd>unsigned char* The encoded text; users shall free encoded data memory manually; if the return value is NULL, please don't free the returned memory </dd></dl>
+<p>Converting three bytes (decimal) to four base64 alphabets</p>
+<p>Taking three alphabets for handling</p>
+<p>According to binary theorem, the first one shall shift 16 bits, the second one is 8 bits and the last one is occupied 0 bit; therefore, the three alphabets in binary can be displayed in the following.</p>
+<p>Calculating the one alphabet's index of base 64 in order where <code>triple &gt;&gt; 3 * 6</code> implies triple will right shift 18 bits (i.e., only 6 bits remained); <code>0x3F</code> (hex) implies the significant bits <code>00111111</code> (binary); According to the theorem above, users can obtain the six bits to obtain an alphabet in base 64 encoding</p>
+<p>Padding with '=' characters if necessary</p>
+
+<p class="definition">定義在 <a class="el" href="_base64_8c_source.html">Base64.c</a> 檔案之第 <a class="el" href="_base64_8c_source.html#l00023">23</a> 行.</p>
+<div class="fragment"><div class="line"><span class="lineno">   24</span>{</div>
+<div class="line"><span class="lineno">   25</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> encodedLength = 4 * ((plainTextLength + 2) / 3);</div>
+<div class="line"><span class="lineno">   26</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* encodedData = (<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>*)malloc(encodedLength + 1);</div>
+<div class="line"><span class="lineno">   27</span>    <span class="keywordflow">if</span> (encodedData == NULL) {</div>
+<div class="line"><span class="lineno">   28</span>        <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><span class="lineno">   29</span>    }</div>
+<div class="line"><span class="lineno">   30</span> </div>
+<div class="line"><span class="lineno">   32</span>    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0, j = 0; i &lt; plainTextLength;) {</div>
+<div class="line"><span class="lineno">   34</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> octFirst = i &lt; plainTextLength ? plainText[i++] : 0;</div>
+<div class="line"><span class="lineno">   35</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> octSecond = i &lt; plainTextLength ? plainText[i++] : 0;</div>
+<div class="line"><span class="lineno">   36</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> octThird = i &lt; plainTextLength ? plainText[i++] : 0;</div>
+<div class="line"><span class="lineno">   37</span> </div>
+<div class="line"><span class="lineno">   41</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> triple = (octFirst &lt;&lt; 0x10) + (octSecond &lt;&lt; 0x08) + octThird;</div>
+<div class="line"><span class="lineno">   42</span> </div>
+<div class="line"><span class="lineno">   48</span>        encodedData[j++] = (<span class="keywordtype">unsigned</span> char)<a class="code hl_variable" href="_base64_8h.html#aad684b55577d00ab391913191cddc849">base64Alphabets</a>[(triple &gt;&gt; 3 * 6) &amp; 0x3F];</div>
+<div class="line"><span class="lineno">   49</span>        encodedData[j++] = (<span class="keywordtype">unsigned</span> char)<a class="code hl_variable" href="_base64_8h.html#aad684b55577d00ab391913191cddc849">base64Alphabets</a>[(triple &gt;&gt; 2 * 6) &amp; 0x3F];</div>
+<div class="line"><span class="lineno">   50</span>        encodedData[j++] = (<span class="keywordtype">unsigned</span> char)<a class="code hl_variable" href="_base64_8h.html#aad684b55577d00ab391913191cddc849">base64Alphabets</a>[(triple &gt;&gt; 1 * 6) &amp; 0x3F];</div>
+<div class="line"><span class="lineno">   51</span>        encodedData[j++] = (<span class="keywordtype">unsigned</span> char)<a class="code hl_variable" href="_base64_8h.html#aad684b55577d00ab391913191cddc849">base64Alphabets</a>[(triple &gt;&gt; 0 * 6) &amp; 0x3F];</div>
+<div class="line"><span class="lineno">   52</span>    }</div>
+<div class="line"><span class="lineno">   53</span> </div>
+<div class="line"><span class="lineno">   55</span>    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; (3 - plainTextLength % 3) % 3; i++) {</div>
+<div class="line"><span class="lineno">   56</span>        encodedData[encodedLength - 1 - i] = <span class="charliteral">&#39;=&#39;</span>;</div>
+<div class="line"><span class="lineno">   57</span>    }</div>
+<div class="line"><span class="lineno">   58</span> </div>
+<div class="line"><span class="lineno">   59</span>    encodedData[encodedLength] = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><span class="lineno">   60</span>    <span class="keywordflow">return</span> encodedData;</div>
+<div class="line"><span class="lineno">   61</span>}</div>
+<div class="ttc" id="a_base64_8h_html_aad684b55577d00ab391913191cddc849"><div class="ttname"><a href="_base64_8h.html#aad684b55577d00ab391913191cddc849">base64Alphabets</a></div><div class="ttdeci">static const unsigned char base64Alphabets[]</div><div class="ttdef"><b>Definition</b> <a href="_base64_8h_source.html#l00016">Base64.h:16</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a7cd8213ce0437fd79d950fd80c7125c8" name="a7cd8213ce0437fd79d950fd80c7125c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7cd8213ce0437fd79d950fd80c7125c8">&#9670;&#160;</a></span>getBase64Index()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int getBase64Index </td>
+          <td>(</td>
+          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramname"><em>alphabet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>To obtain the character from the given alphabet in base 64 encoding</p>
+<dl class="params"><dt>參數</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">alphabet</td><td>unsigned char The alphabet in base 64 encoding </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>傳回值</dt><dd>unsigned int The decimal value of the ASCII code </dd></dl>
+
+<p class="definition">定義在 <a class="el" href="_base64_8c_source.html">Base64.c</a> 檔案之第 <a class="el" href="_base64_8c_source.html#l00130">130</a> 行.</p>
+<div class="fragment"><div class="line"><span class="lineno">  131</span>{</div>
+<div class="line"><span class="lineno">  132</span>    <span class="keywordtype">int</span> returnedValue = 0;</div>
+<div class="line"><span class="lineno">  133</span> </div>
+<div class="line"><span class="lineno">  134</span>    <span class="keywordflow">if</span> (alphabet &gt;= (<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>)<span class="charliteral">&#39;A&#39;</span> &amp;&amp; alphabet &lt;= (<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>)<span class="charliteral">&#39;Z&#39;</span>) {</div>
+<div class="line"><span class="lineno">  135</span>        returnedValue = alphabet - (<span class="keywordtype">unsigned</span> char)<span class="charliteral">&#39;A&#39;</span>;</div>
+<div class="line"><span class="lineno">  136</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (alphabet &gt;= (<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>)<span class="charliteral">&#39;a&#39;</span> &amp;&amp; alphabet &lt;= (<span class="keywordtype">unsigned</span> char)<span class="charliteral">&#39;z&#39;</span>) {</div>
+<div class="line"><span class="lineno">  137</span>        returnedValue = alphabet - (<span class="keywordtype">unsigned</span> char)<span class="charliteral">&#39;a&#39;</span> + 26;</div>
+<div class="line"><span class="lineno">  138</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (alphabet &gt;= (<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>)<span class="charliteral">&#39;0&#39;</span> &amp;&amp; alphabet &lt;= (<span class="keywordtype">unsigned</span> char)<span class="charliteral">&#39;9&#39;</span>) {</div>
+<div class="line"><span class="lineno">  139</span>        returnedValue = alphabet - (<span class="keywordtype">unsigned</span> char)<span class="charliteral">&#39;0&#39;</span> + 52;</div>
+<div class="line"><span class="lineno">  140</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (alphabet == (<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>)<span class="charliteral">&#39;+&#39;</span>) {</div>
+<div class="line"><span class="lineno">  141</span>        returnedValue = 62;</div>
+<div class="line"><span class="lineno">  142</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (alphabet == (<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>)<span class="charliteral">&#39;/&#39;</span>) {</div>
+<div class="line"><span class="lineno">  143</span>        returnedValue = 63;</div>
+<div class="line"><span class="lineno">  144</span>    }</div>
+<div class="line"><span class="lineno">  145</span> </div>
+<div class="line"><span class="lineno">  146</span>    <span class="keywordflow">return</span> returnedValue;</div>
+<div class="line"><span class="lineno">  147</span>}</div>
+</div><!-- fragment --><div class="dynheader">
+呼叫此函數的函數列表:</div>
+<div class="dyncontent">
+<div class="center"><img src="_base64_8h_a7cd8213ce0437fd79d950fd80c7125c8_icgraph.png" border="0" usemap="#a_base64_8h_a7cd8213ce0437fd79d950fd80c7125c8_icgraph" alt=""/></div>
+<map name="a_base64_8h_a7cd8213ce0437fd79d950fd80c7125c8_icgraph" id="a_base64_8h_a7cd8213ce0437fd79d950fd80c7125c8_icgraph">
+<area shape="rect" title=" " alt="" coords="161,5,275,32"/>
+<area shape="rect" href="_base64_8c.html#a458fcb356097ffd6d30f35dbe227b4d5" title=" " alt="" coords="5,5,113,32"/>
+<area shape="poly" title=" " alt="" coords="146,21,113,21,113,16,146,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">變數說明文件</h2>
+<a id="aad684b55577d00ab391913191cddc849" name="aad684b55577d00ab391913191cddc849"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad684b55577d00ab391913191cddc849">&#9670;&#160;</a></span>base64Alphabets</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const unsigned char base64Alphabets[] = &quot;ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Base 64 definition </p>
+
+<p class="definition">定義在 <a class="el" href="_base64_8h_source.html">Base64.h</a> 檔案之第 <a class="el" href="_base64_8h_source.html#l00016">16</a> 行.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+產生者:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7
+</small></address>
+</body>
+</html>
